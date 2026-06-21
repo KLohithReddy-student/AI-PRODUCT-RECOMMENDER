@@ -14,12 +14,6 @@ st.set_page_config(
 # Custom CSS for custom styling, cards, and borders
 st.markdown("""
 <style>
-    /* Main Layout Customizations */
-    .main {
-        background-color: #f8f9fa;
-        color: #212529;
-    }
-    
     /* Header Style */
     .title-banner {
         background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
@@ -39,32 +33,34 @@ st.markdown("""
         margin: 0.5rem 0 0 0;
         font-size: 1.1rem;
         opacity: 0.9;
+        color: rgba(255, 255, 255, 0.9) !important;
     }
     
     /* Product Cards */
     .product-card {
-        background-color: white;
+        background-color: var(--secondary-background-color);
+        color: var(--text-color);
         padding: 1.5rem;
         border-radius: 10px;
-        border-left: 5px solid #2a5298;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        border-left: 5px solid var(--primary-color);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         margin-bottom: 1rem;
         transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     }
     .product-card:hover {
         transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.12);
     }
     .product-name {
         font-size: 1.25rem;
         font-weight: 600;
-        color: #1e3c72;
+        color: var(--primary-color);
         margin-bottom: 0.25rem;
     }
     .product-category {
         display: inline-block;
-        background-color: #e9ecef;
-        color: #495057;
+        background-color: rgba(128, 128, 128, 0.15);
+        color: var(--text-color);
         font-size: 0.75rem;
         font-weight: 600;
         padding: 0.25rem 0.6rem;
@@ -75,28 +71,30 @@ st.markdown("""
     }
     .product-description {
         font-size: 0.95rem;
-        color: #495057;
+        color: var(--text-color);
         line-height: 1.4;
+        opacity: 0.9;
     }
     
     /* Recommendation Card Specifics */
     .rec-card {
-        background-color: white;
+        background-color: var(--secondary-background-color);
+        color: var(--text-color);
         padding: 1.5rem;
         border-radius: 10px;
-        border: 1px solid #e9ecef;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        border: 1px solid rgba(128, 128, 128, 0.2);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         margin-bottom: 1.25rem;
         transition: all 0.2s;
     }
     .rec-card:hover {
-        border-color: #2a5298;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        border-color: var(--primary-color);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.1);
     }
     .rec-score-badge {
         float: right;
         background-color: #28a745;
-        color: white;
+        color: white !important;
         font-size: 0.85rem;
         font-weight: 700;
         padding: 0.3rem 0.75rem;
@@ -105,13 +103,13 @@ st.markdown("""
     
     /* Reason box styling */
     .reason-box {
-        background-color: #f1f8ff;
-        border: 1px dashed #b4d5ff;
+        background-color: rgba(30, 144, 255, 0.08);
+        border: 1px dashed rgba(30, 144, 255, 0.25);
         padding: 0.75rem 1rem;
         border-radius: 8px;
         margin-top: 0.75rem;
         font-size: 0.9rem;
-        color: #2c3e50;
+        color: var(--text-color);
     }
 </style>
 """, unsafe_allow_html=True)
