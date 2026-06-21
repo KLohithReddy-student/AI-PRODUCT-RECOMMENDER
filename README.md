@@ -1,5 +1,7 @@
 # AI-Based Product Recommendation System
 
+![AI Product Recommendation System Banner](assets/project_thumbnail.png)
+
 An AI-powered content-based product recommendation system built with **Python**, **Streamlit**, and **Scikit-Learn**. This application uses Natural Language Processing (NLP) techniques to compute textual similarities between product descriptions and suggest the most relevant items to a user.
 
 This project is structured, thoroughly documented, and designed to serve as a stellar **College Capstone Project** or portfolio piece.
