@@ -4,7 +4,7 @@
 
 An AI-powered content-based product recommendation system built with **Python**, **Streamlit**, and **Scikit-Learn**. This application uses Natural Language Processing (NLP) techniques to compute textual similarities between product descriptions and suggest the most relevant items to a user.
 
-This project is structured, thoroughly documented, and designed to serve as a stellar **College Capstone Project** or portfolio piece.
+This project is structured, thoroughly documented, and designed to serve as a stellar **Kaggle Capstone Project** or portfolio piece.
 
 🚀 **Live Interactive Demo:** [ai-recommender-lohith.streamlit.app](https://ai-recommender-lohith.streamlit.app/)
 
@@ -106,7 +106,7 @@ The application will automatically start in your default web browser (typically 
 
 ## 💡 Extending the Capstone Project
 
-If you are presenting this for a college project, here are some excellent ways to expand it for extra credit:
+If you are presenting this for a Kaggle project, here are some excellent ways to expand it further:
 1.  **Collaborative Filtering Integration**: Add an alternative page that recommends products based on user ratings using Singular Value Decomposition (SVD) from the `surprise` library.
 2.  **Hybrid Recommender**: Combine this content-based similarity score with user ratings to form a hybrid score.
 3.  **Deep Learning Embeddings**: Replace TF-IDF vectors with dense word embeddings from pre-trained models like Word2Vec, GloVe, or BERT (via Hugging Face's `transformers` or `sentence-transformers`) for semantic similarity (e.g., understanding that "phone" and "mobile" are related).
