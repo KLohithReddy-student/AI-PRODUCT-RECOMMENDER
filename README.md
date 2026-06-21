@@ -6,6 +6,8 @@ An AI-powered content-based product recommendation system built with **Python**,
 
 This project is structured, thoroughly documented, and designed to serve as a stellar **College Capstone Project** or portfolio piece.
 
+🚀 **Live Interactive Demo:** [ai-recommender-lohith.streamlit.app](https://ai-recommender-lohith.streamlit.app/)
+
 ---
 
 ## 🌟 Features
