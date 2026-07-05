@@ -1,16 +1,29 @@
-name: Keep Streamlit App Alive
+name: Keep App Alive and Boost Graph
 
 on:
   schedule:
-    # Runs at 00:00 UTC every single day
     - cron: '0 0 * * *'
-  # Allows you to manually trigger it whenever you want
   workflow_dispatch:
 
 jobs:
-  ping-app:
+  ping-and-commit:
     runs-on: ubuntu-latest
     steps:
+      # 1. This checks out your repository code so the server can see it
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      # 2. This pings your Streamlit app to keep it awake
       - name: Ping Streamlit URL
         run: |
           curl -I https://ai-recommender-lohith.streamlit.app/
+
+      # 3. This writes the current date to a log file and pushes it to GitHub
+      - name: Update Log and Commit
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          echo "Last pinged on: $(date)" > ping_log.txt
+          git add ping_log.txt
+          git commit -m "chore: daily keep-alive ping [skip ci]"
+          git push
